@@ -1,0 +1,5 @@
+Insertion Sort:
+
+# https://visualgo.net/en/sorting
+# https://goo.gl/8od4NZ
+# http://interactivepython.org/NWUbZ/LMdYZ/LpOMZ/courselib/static/pythonds/SortSearch/TheInsertionSort.html
