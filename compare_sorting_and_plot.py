@@ -78,13 +78,13 @@ sys.setrecursionlimit(maximum+2)
 #plt.title('Umgekehrt sortierte Zahlenliste')
 
 # Erzeuge zufällige Liste von Zahlen
-liste = random.sample(range(maximum), maximum)
-plt.title('Zufällige Zahlenliste ohne Wiederholungen')
+#liste = random.sample(range(maximum), maximum)
+#plt.title('Zufällige Zahlenliste ohne Wiederholungen')
 
-# Lade Datei mit vielen Zeilen zum sortieren
-# with open('pw/10-kilo-pw.txt', 'rt', encoding="ISO-8859-1") as f:  #'10-million-pw.txt'
-#     liste = f.read().splitlines()
-# plt.title('Zufällige Zeichenfolgen')
+# Lade Passwort-Datei mit vielen Zeilen zum sortieren
+with open('pw/10-kilo-pw.txt', 'rt', encoding="ISO-8859-1") as f:  #'10-million-pw.txt'
+    liste = f.read().splitlines()
+plt.title('Zufällige Zeichenfolgen')
 
 x_values = []
 y_bubble_sort = []
@@ -97,19 +97,19 @@ y_py_sort = []
 for length in range (0, maximum, maximum // 20):
     x_values.append(length)
 
-    # t1 = time()
-    # print("bubble_sort,         ", end='')
-    # bubble_sort(liste[:length])
-    # t2 = time()
-    # print(length, ",", t2 - t1)
-    # y_bubble_sort.append(t2 - t1)
-    #
-    # t1 = time()
-    # print("selection_sort,      ", end='')
-    # selection_sort(liste[:length])
-    # t2 = time()
-    # print(length, ",", t2 - t1)
-    # y_selection_sort.append(t2 - t1)
+    t1 = time()
+    print("bubble_sort,         ", end='')
+    bubble_sort(liste[:length])
+    t2 = time()
+    print(length, ",", t2 - t1)
+    y_bubble_sort.append(t2 - t1)
+
+    t1 = time()
+    print("selection_sort,      ", end='')
+    selection_sort(liste[:length])
+    t2 = time()
+    print(length, ",", t2 - t1)
+    y_selection_sort.append(t2 - t1)
 
     # t1 = time()
     # print("insertion_sort_slow, ", end='')
@@ -118,12 +118,12 @@ for length in range (0, maximum, maximum // 20):
     # print(length, ",", t2 - t1)
     # y_insertion_sort_slow.append(t2 - t1)
 
-    # t1 = time()
-    # print("insertion_sort,      ", end='')
-    # insertion_sort(liste[:length])
-    # t2 = time()
-    # print(length, ",", t2 - t1)
-    # y_insertion_sort.append(t2 - t1)
+    t1 = time()
+    print("insertion_sort,      ", end='')
+    insertion_sort(liste[:length])
+    t2 = time()
+    print(length, ",", t2 - t1)
+    y_insertion_sort.append(t2 - t1)
 
     t1 = time()
     print("quick_sort,          ", end='')
@@ -132,20 +132,20 @@ for length in range (0, maximum, maximum // 20):
     print(length, ",", t2 - t1)
     y_quick_sort.append(t2 - t1)
 
-    t1 = time()
-    print("pythons timsort,     ", end='')
-    liste[:length].sort()
-    t2 = time()
-    print(length, ",", t2 - t1)
-    y_py_sort.append(t2 - t1)
+    # t1 = time()
+    # print("pythons timsort,     ", end='')
+    # liste[:length].sort()
+    # t2 = time()
+    # print(length, ",", t2 - t1)
+    # y_py_sort.append(t2 - t1)
 
 
-# plt.plot(x_values, y_bubble_sort, label="bubble_sort")
-# plt.plot(x_values, y_selection_sort, label="selection_sort")
+plt.plot(x_values, y_bubble_sort, label="bubble_sort")
+plt.plot(x_values, y_selection_sort, label="selection_sort")
 # plt.plot(x_values, y_insertion_sort_slow, label="insertion_sort (slow)")
-# plt.plot(x_values, y_insertion_sort, label="insertion_sort")
+plt.plot(x_values, y_insertion_sort, label="insertion_sort")
 plt.plot(x_values, y_quick_sort, label="quick_sort")
-plt.plot(x_values, y_py_sort, label="pythons timsort")
+#plt.plot(x_values, y_py_sort, label="pythons timsort")
 plt.xlabel('length of list')
 plt.ylabel('time')
 plt.legend(loc='upper left')
