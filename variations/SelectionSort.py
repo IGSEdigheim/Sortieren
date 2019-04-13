@@ -23,7 +23,7 @@ def selection_sort(A):
         i = i+1
 
 
-#Liste = [6,9,3,5,2]
-Liste = [9,10,4,3]
+Liste = [6,9,3,5,2]
+#Liste = [9,10,4,3]
 selection_sort(Liste)
 print(Liste)
