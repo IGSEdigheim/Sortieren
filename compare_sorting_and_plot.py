@@ -2,33 +2,35 @@ import random
 from time import *
 import sys
 import matplotlib.pyplot as plt
-import variations.BubbleSort as bs
-import variations.SelectionSort as ss
-import variations.InsertionSort as ins
-import variations.QuickSort as qs
+import Sortierverfahren.BubbleSort as bs
+import Sortierverfahren.SelectionSort as ss
+import Sortierverfahren.InsertionSort as ins
+import Sortierverfahren.QuickSort as qs
 
-maximum = 10001
+
+# 1. Bitte wählen Sie hier, wie lang die Liste für die Tests maximal werden soll.
+
+maximum = 1001
 sys.setrecursionlimit(maximum+2)
 
-# Bitte wählen Sie welche Daten Sie sortieren möchten, indem Sie die entsprechenden Zeilen auskommentieren
 
-# Erzeuge umgekehrt sortierte Liste von Zahlen
-# liste = list(range(maximum,0,-1))
-# plt.title('Umgekehrt sortierte Zahlenliste')
-
+# 2. Bitte wählen Sie welche Daten Sie sortieren möchten, indem Sie die entsprechenden Zeilen auskommentieren
 
 # Erzeuge zufällige Liste von Zahlen
 liste = random.sample(range(maximum), maximum)
 plt.title('Zufällige Zahlenliste ohne Wiederholungen')
 
+# Erzeuge umgekehrt sortierte Liste von Zahlen
+# liste = list(range(maximum,0,-1))
+# plt.title('Umgekehrt sortierte Zahlenliste')
 
-# Lade Passwort-Datei mit vielen Zeilen zum sortieren
-# with open('pw/10-kilo-pw.txt', 'rt', encoding="ISO-8859-1") as f:  #'10-million-pw.txt'
+# Lade Passwort-Datei zum sortieren
+# with open('Passwords/10-kilo-pw.txt', 'rt', encoding="ISO-8859-1") as f:  #'10-million-pw.txt'
 #     liste = f.read().splitlines()
 # plt.title('Zufällige Zeichenfolgen')
 
 
-# Bitte wählen Sie die Sortierverfahren aus, die Sie gegeneinander antreten lassen möchten.
+# 3. Bitte wählen Sie die Sortierverfahren aus, die Sie gegeneinander antreten lassen möchten.
 
 measure = {"Bubble_sort": True,
            "Selection_sort": True,
