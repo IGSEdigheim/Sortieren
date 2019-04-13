@@ -17,13 +17,12 @@ def selection_sort(A):
         while j < n:
             if A[j] < A[kleinste]:
                 kleinste = j
-            print(A, i, j, kleinste)
+            #print(A, i, j, kleinste)
             j = j+1
         A[kleinste], A[i] = A[i] ,A[kleinste]
         i = i+1
 
 
-Liste = [6,9,3,5,2]
-#Liste = [9,10,4,3]
-selection_sort(Liste)
-print(Liste)
+#Liste = [6,9,3,5,2]
+#selection_sort(Liste)
+#print(Liste)

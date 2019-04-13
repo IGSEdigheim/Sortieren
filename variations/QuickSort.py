@@ -8,13 +8,13 @@ def partition(A, start, end):
     return pos
 
 
-def quickSort(A, start, end):
+def quick_sort(A, start, end):
     if start < end:
         pos = partition(A, start, end)
-        quickSort(A, start, pos - 1)
-        quickSort(A, pos + 1, end)
+        quick_sort(A, start, pos - 1)
+        quick_sort(A, pos + 1, end)
     return A
 
 
-unsortierte_Liste = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-print(quickSort(unsortierte_Liste, 0, len(unsortierte_Liste) - 1))
+#unsortierte_Liste = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+#print(quickSort(unsortierte_Liste, 0, len(unsortierte_Liste) - 1))

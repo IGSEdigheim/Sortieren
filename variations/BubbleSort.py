@@ -17,7 +17,8 @@ def bubble_sort(A):
             i = i+1
         n = n-1
 
-def bubble_sort_invert(A):
+
+def bubble_sort_reversed(A):
     n = len(A)
     s = 0
     while s < n-1:
@@ -30,6 +31,6 @@ def bubble_sort_invert(A):
         s = s+1
 
 
-Liste = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-bubble_sort(Liste)
-print(Liste)
+#Liste = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+#bubble_sort(Liste)
+#print(Liste)

@@ -27,13 +27,13 @@ def insertion_sort(A):
         merke = A[i]
         j = i
         while j > 0 and A[j-1] > merke:
-            print(A, i, j, merke)
+            #print(A, i, j, merke)
             A[j] = A[j-1]
             j = j-1
         A[j] = merke
         i = i+1
 
 
-Liste = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-insertion_sort(Liste)
-print(Liste)
+#Liste = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+#insertion_sort(Liste)
+#print(Liste)
