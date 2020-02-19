@@ -34,9 +34,9 @@ plt.title('Zufällige Zahlenliste ohne Wiederholungen')
 
 measure = {"Bubble_sort": True,
            "Selection_sort": True,
-           "Insertion_sort_slow": True,
+           "Insertion_sort_slow": False,
            "Insertion_sort": True,
-           "Quick_sort": False,
+           "Quick_sort": True,
            "Tim_sort": False}
 
 x_values = []
